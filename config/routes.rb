@@ -3,4 +3,7 @@ Rails.application.routes.draw do
 
   get '/' => 'pages#index'
 
+  # Creats 7 RESTful routes
+  resources :articles
+
 end
