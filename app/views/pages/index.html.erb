@@ -1,2 +1,13 @@
-<h1>OTTERS</h1>
+<h2>Otter Appreciation Blog</h2>
 <button type="button" name="new_article"><a href="/articles/new">New Article</a></button>
+
+<% @articles.each do |article| %>
+  <ul>
+    <article class='<%= article.id%>'>
+      <h3><%= article.title %></h3>
+      <p><%= article.description %></p>
+      <h6><i><%= article.created_at %></i></h6>
+      <i>~ <%= article.name %></i>
+    </article>
+  </ul>
+<% end %>
