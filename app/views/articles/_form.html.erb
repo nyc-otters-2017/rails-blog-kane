@@ -11,7 +11,7 @@
 
   <p>
     <%= f.label :name %><br>
-    <%= f.text_field :name, :input_html => { :value => 'anonymousOtter'} %>
+    <%= f.text_field :name #, :input_html => { value: f ? value:'anonymousOtter' } %>
   </p>
 
   <p>
