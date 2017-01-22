@@ -1,0 +1,20 @@
+<%= form_for :article, url: articles_path do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description, size: "50X10" %>
+  </p>
+
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name #, :input_html => { value: f ? value:'anonymousOtter' } %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
