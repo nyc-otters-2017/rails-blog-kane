@@ -42,10 +42,14 @@ class ArticlesController < ApplicationController
 
   def destroy
     #delete '/articles/:id'
-  end
-end
+    @article = Article.find(params[:id])
+    @article.destroy
 
-private
+    redirect_to articles_path
+  end
+  
+  private
   def article_params
     params.require(:article).permit(:name, :title, :description)
   end
+end

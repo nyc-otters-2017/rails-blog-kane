@@ -9,7 +9,8 @@
       <h6><i><%= article.created_at %></i></h6>
       <i>~ <%= article.name %></i>
       <span><%= link_to 'Show', article_path(article) %></span> |
-      <span><%= link_to 'Edit', edit_article_path(article) %></span>
+      <span><%= link_to 'Edit', edit_article_path(article) %></span> |
+      <span><%= link_to 'Delete', article_path(article), method: :delete, data: { confirm: 'Are you sure?' } %></span>
     </article>
   </ul>
 <% end %>
