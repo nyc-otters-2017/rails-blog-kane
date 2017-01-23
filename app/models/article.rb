@@ -1,3 +1,4 @@
 class Article < ApplicationRecord
-  # attr_accessor :name, :title, :description
+  validates :title, presence: true,
+                   length: {minimum: 5}
 end

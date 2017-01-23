@@ -1,22 +1,22 @@
 class ArticlesController < ApplicationController
   def index
     #get '/articles'
-    @articles = Articles.all
+    # @articles = Articles.all
+    redirect_to '/'
   end
 
   def new
     #get '/articles/new'
+    @article = Article.new
   end
 
   def create
-    #post '/articles'
-    # @article = Article.new(params[:article])
-    # render plain: params[:article].inspect
     @article = Article.new(article_params)
-
-    @article.save
-    redirect_to @article
-
+    if @article.save
+      redirect_to @article
+    else
+      render 'new'
+    end
   end
 
   def show
@@ -26,10 +26,18 @@ class ArticlesController < ApplicationController
 
   def edit
     #get '/articles/:id/edit'
+    @article = Article.find(params[:id])
   end
 
   def update
     #put '/articles/:id'
+    @article = Article.find(params[:id])
+
+    if @article.update(article_params)
+      redirect_to @article
+    else
+      render 'edit'
+    end
   end
 
   def destroy
