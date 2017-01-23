@@ -26,3 +26,33 @@
    padding-top: 10px;
    background-color: #EFF0F1;
  }
+ nav {
+   background-color:
+ }
+
+ article {
+   background-color: #F69C55;
+   width: 400px;
+   padding: 5px;
+   padding-left: 10px;
+   padding-right: 10px;
+   overflow: hidden;
+ }
+
+ article i {
+   float: right;
+   clear: both;
+ }
+
+.form {
+  background-color: #F69C55;
+
+  width: 400px;
+  padding: 5px;
+  padding-left: 5%;
+  overflow: hidden;
+}
+
+textarea {
+  resize: none;
+}
